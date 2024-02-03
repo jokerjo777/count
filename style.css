@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+:root {
+    --body: rgb(24, 25, 38);
+    --colour:rgb(204, 208, 218);
+    --div:rgb(41, 44, 60);
+    --for-btn: rgb(114, 135, 253);
+    --for-reset: rgb(231, 130, 132);
+}
+
+body {
+    background: var(--body);
+    color: var(--colour);
+    font-family: 'Protest Riot', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--div);
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    user-select: none;
+}
+
+#count {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-family: 'Protest Riot', sans-serif;
+    color: var(--body);
+    cursor: pointer;
+}
+
+.btns {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#decreaseBtn,
+#increaseBtn {
+    background-color: var(--for-btn);
+    transition: all 0.15s;
+}
+
+#decreaseBtn:active {
+    box-shadow: 0 0 20px rgba(114, 135, 253, 0.5);
+}
+
+#resetBtn {
+    background-color: var(--for-reset);
+    transition: all 0.15s;
+}
+
+#resetBtn:active {
+    box-shadow: 0 0 20px rgba(231, 130, 132, 0.5);
+}
+
+#increaseBtn:active {
+    box-shadow: 0 0 20px rgba(114, 135, 253, 0.5);
+}
+
+@media screen and (max-width: 961px) {
+    .btns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #decreaseBtn {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #resetBtn {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #increaseBtn {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    .main {
+        width: 80%;
+    }
+}
